@@ -7,20 +7,11 @@ interface IButtonProps
     ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
-  primary?: boolean;
-  secondary?: boolean;
   children: string | any;
-  className: string;
+  className?: string;
 }
 
-const Button: React.FC<IButtonProps> = ({
-  primary,
-  secondary,
-  children,
-  className,
-  ...rest
-}) => {
-  className += (primary && "btn-primary") || (secondary && "btn-secondary");
+const Button: React.FC<IButtonProps> = ({ children, className, ...rest }) => {
   return (
     <button className={"btn " + className} {...rest}>
       {children}

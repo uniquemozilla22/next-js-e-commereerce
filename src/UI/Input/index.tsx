@@ -1,5 +1,4 @@
 "use client";
-
 import { DetailedHTMLProps, InputHTMLAttributes } from "react";
 
 interface IInputProps
